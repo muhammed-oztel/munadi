@@ -5,6 +5,9 @@ from datetime import date
 gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_ezan(json_path: str) -> dict:
     with open(json_path, encoding="utf-8") as f:
@@ -91,6 +94,6 @@ class MunadiApp(Gtk.Application):
 
 
 if __name__ == "__main__":
-    ezan = load_ezan("./resources/ezan_istanbul_2026.json")
+    ezan = load_ezan(os.path.join(BASE_DIR, "resources", "ezan_istanbul_2026.json"))  
     app = MunadiApp(ezan)
     app.run(None)

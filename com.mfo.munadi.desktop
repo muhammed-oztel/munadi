@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Munadî
+Comment=Günlük ezan vakitleri
+Exec=/usr/bin/python3 /usr/local/share/munadi/munadi.py
+Icon=accessories-clock
+Terminal=false
+Type=Application
+Categories=Utility;
